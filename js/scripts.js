@@ -3,6 +3,12 @@ const container = document.querySelector('.container');
 const screens = document.querySelectorAll('.screen');
 const header = document.querySelector('.header');
 
+window.addEventListener('load', () => {
+  screens.forEach(screen => {
+    screen.style.display = 'none';
+    screens[0].style.display = 'block'
+  });
+})
 
 burger.addEventListener('click', () => {
   container.classList.toggle('active')
